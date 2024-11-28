@@ -14,11 +14,11 @@
           Noob Santa Token ($Noob) is a deflationary meme token on $BSC, created for fun and celebrations of Xmas season. <br> The aim is to enrich the binance ecosystem lovers through a valued Educational and Shopping 🛒 tokenization while we celebrate a joyful Xmas🎄🎁 together
         </p>
         <div class="flex gap-6 mt-6">
-          <a class="bg-white px-6 py-3 text-red-700 flex justify-center items-center gap-6 rounded-md w-fit hover:border-white border border-transparent hover:text-white hover:bg-transparent duration-500 ease-in-out">
+          <a href="https://x.com/NoobSantatoken?t=2EeX6yodqKUFpV6fmuDjJw&s=09" target="_blank" class="bg-white px-6 py-3 text-red-700 flex justify-center items-center gap-6 rounded-md w-fit hover:border-white border border-transparent hover:text-white hover:bg-transparent duration-500 ease-in-out">
             <Twitter class="w-6 h-6 " />
             Twitter / X
           </a>
-          <a class="bg-white px-6 py-3 text-red-700 flex justify-center items-center gap-6 rounded-md w-fit hover:border-white border border-transparent hover:text-white hover:bg-transparent duration-500 ease-in-out">
+          <a href="https://t.me/NoobSantaToken" target="_blank" class="bg-white px-6 py-3 text-red-700 flex justify-center items-center gap-6 rounded-md w-fit hover:border-white border border-transparent hover:text-white hover:bg-transparent duration-500 ease-in-out">
             <Telegram class="w-6 h-6 " />
             Telegram
           </a>
@@ -33,15 +33,15 @@
 
   <section class="max-w-7xl mx-auto px-6 py-20 gap-6">
     <h2 class="head text-red-700 text-5xl text-center w-full">Roadmap</h2>
-    <div class="mt-12 flex gap-6 lg:block">
-      <div class="flex items-center relative"> 
-        <div class="flex justify-around w-full absolute">
+    <div class="mt-12 flex lg:gap-6 lg:block relative"> 
+      <div class="flex justify-center lg:justify-evenly lg:items-center relative w-full"> 
+        <div class="flex flex-col lg:flex-row justify-around h-full lg:h-auto lg:w-full absolute">
           <h3 class="head bg-red-700 text-white p-2 text-3xl rounded-l-md lg:rounded-t-md lg:rounded-l-none">Phase 1</h3>
           <h3 class="head bg-red-700 text-white p-2 text-3xl rounded-l-md lg:rounded-t-md lg:rounded-l-none">Phase 2</h3>
           <h3 class="head bg-red-700 text-white p-2 text-3xl rounded-l-md lg:rounded-t-md lg:rounded-l-none">Phase 3</h3>
           <h3 class="head bg-red-700 text-white p-2 text-3xl rounded-l-md lg:rounded-t-md lg:rounded-l-none">Phase 4</h3>
         </div>
-        <div class="bg-red-700 h-0.5 w-full"></div>
+        <div class="bg-red-700 w-0.5 h-full lg:h-0.5 lg:w-full"></div>
       </div>
 
       <div class="grid lg:grid-cols-4 gap-6">
@@ -154,14 +154,14 @@
   <footer class="p-6 bg-red-700">
     <p class="text-center text-white">&copy; Noob Santa Token {{ new Date().getFullYear() }}</p>
     <div class="flex justify-center gap-6 mt-2">
-      <a class="bg-white px-6 py-3 text-red-700 flex justify-center items-center gap-6 rounded-md w-fit hover:border-white border border-transparent hover:text-white hover:bg-transparent duration-500 ease-in-out">
-        <Twitter class="w-6 h-6 " />
-        Twitter / X
-      </a>
-      <a class="bg-white px-6 py-3 text-red-700 flex justify-center items-center gap-6 rounded-md w-fit hover:border-white border border-transparent hover:text-white hover:bg-transparent duration-500 ease-in-out">
-        <Telegram class="w-6 h-6 " />
-        Telegram
-      </a>
+      <a href="https://x.com/NoobSantatoken?t=2EeX6yodqKUFpV6fmuDjJw&s=09" target="_blank" class="bg-white px-6 py-3 text-red-700 flex justify-center items-center gap-6 rounded-md w-fit hover:border-white border border-transparent hover:text-white hover:bg-transparent duration-500 ease-in-out">
+            <Twitter class="w-6 h-6 " />
+            Twitter / X
+          </a>
+          <a href="https://t.me/NoobSantaToken" target="_blank" class="bg-white px-6 py-3 text-red-700 flex justify-center items-center gap-6 rounded-md w-fit hover:border-white border border-transparent hover:text-white hover:bg-transparent duration-500 ease-in-out">
+            <Telegram class="w-6 h-6 " />
+            Telegram
+          </a>
     </div>
   </footer>
 </template>
