@@ -130,7 +130,6 @@
         <div class="mt-6 list-disc block">
           <li>
             Marketing 10%
-Liquidiy 75%
           </li>
           <li>
             Exchange listings 5%
