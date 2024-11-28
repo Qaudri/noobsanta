@@ -124,6 +124,34 @@
 
   <section class="max-w-7xl mx-auto px-6 pb-20 gap-6">
     <main class="grid lg:grid-cols-2 place-content-center items-center max-w-7xl mx-auto p-6 gap-6 mt-12">
+      <img src="./public/02.jpg" alt="" class="w-full">
+      <div>
+        <h2 class="head text-red-700 text-5xl w-full">TOKENOMICS </h2>
+        <div class="mt-6 list-disc block">
+          <li>
+            Marketing 10%
+Liquidiy 75%
+          </li>
+          <li>
+            Exchange listings 5%
+          </li>
+          <li>
+            Team and Advisors 5%
+          </li>
+          <li>
+            Utility building 5%
+          </li>
+          <li>
+            Liquidiy 75%
+          </li>
+        </div>
+      </div>
+
+    </main>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-6 pb-20 gap-6">
+    <main class="grid lg:grid-cols-2 place-content-center items-center max-w-7xl mx-auto p-6 gap-6 mt-12">
       <div>
         <h2 class="head text-red-700 text-5xl w-full">Technical Development Roadmap</h2>
         <div class="mt-6 list-disc block">
