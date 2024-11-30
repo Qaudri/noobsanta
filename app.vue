@@ -31,6 +31,25 @@
     <img src="./public/snow.svg" class="w-full" alt="">
   </section>
 
+  <section class="grid lg:grid-cols-2 max-w-7xl mx-auto mt-12 lg:divide-x lg:divide-y-0 divide-y divide-red-700 h-full">
+    <div class="p-6">
+      <h2 class="head text-red-700 text-5xl w-full capitalize text-center">Noob Santa Fundamentals</h2>
+      <div class="mt-6">
+        <li>NOOB SANTA FUNDAMENTALS        </li>
+        <li>Ecommerce</li>
+        <li>Santa pay (Crypto Debit card 💳/ wallet)        </li>
+        <li>Santa Ai (Story telling, Riddles/Jokes, Gifts distribution, Customer relations)</li>
+      </div>
+    </div>
+    <div class="place-content-center place-items-center w-full h-full p-6">
+      <p>0x213e4b8ab51deB11b33a4dF1185437077395d402</p>
+      <button class="py-3 px-6 rounded-md flex gap-4 text-white font-medium text-xl mt-4" :class="copied ? 'bg-green-600' : 'bg-red-700'" @click="copyAddress('0x213e4b8ab51deB11b33a4dF1185437077395d402')">
+        <Copy class="w-7 h-7" />
+        {{copy_text}}
+      </button>
+    </div>
+  </section>
+
   <section class="max-w-7xl mx-auto px-6 py-20 gap-6">
     <h2 class="head text-red-700 text-5xl text-center w-full">Roadmap</h2>
     <div class="mt-12 flex lg:gap-6 lg:block relative"> 
@@ -101,11 +120,11 @@
     </div>
   </section>
 
-  <section class="max-w-7xl mx-auto px-6 pb-20 gap-6">
+  <section class="bg-red-700 text-white">
     <main class="grid lg:grid-cols-2 place-content-center items-center max-w-7xl mx-auto p-6 gap-6 mt-12">
       <img src="./public/04.jpg" alt="" class="w-full">
       <div>
-        <h2 class="head text-red-700 text-5xl w-full">Long-Term Goals (2025+)</h2>
+        <h2 class="head text-5xl w-full">Long-Term Goals (2025+)</h2>
         <div class="mt-6 list-disc block">
           <li>
             Meme Ecosystem: Develop a comprehensive meme ecosystem with various applications.
@@ -122,7 +141,7 @@
     </main>
   </section>
 
-  <section class="max-w-7xl mx-auto px-6 pb-20 gap-6">
+  <section class="px-6 gap-6">
     <main class="grid lg:grid-cols-2 place-content-center items-center max-w-7xl mx-auto p-6 gap-6 mt-12">
       <img src="./public/02.jpg" alt="" class="w-full">
       <div>
@@ -149,7 +168,7 @@
     </main>
   </section>
 
-  <section class="max-w-7xl mx-auto px-6 pb-20 gap-6">
+  <section class="">
     <main class="grid lg:grid-cols-2 place-content-center items-center max-w-7xl mx-auto p-6 gap-6 mt-12">
       <div>
         <h2 class="head text-red-700 text-5xl w-full">Technical Development Roadmap</h2>
@@ -192,6 +211,67 @@
     </div>
   </footer>
 </template>
+<script setup>
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
+import { ref } from "vue";
+
+let copy_text = 'Copy Contract Address';
+let copied = ref(false);
+
+const copyAddress = (text) => {
+    // Use the Clipboard API if available
+    if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text);
+    toast.success("Contact Address copied to clipboard", {
+      autoClose: 1000,
+      position: toast.POSITION.TOP_CENTER,
+      theme: toast.THEME.COLORED
+    });
+    
+    copy_text = 'Copied';    
+    copied.value = true
+  } 
+  // Fallback method for older browsers
+  else {
+    // Create a temporary textarea element
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    
+    // Make the textarea out of viewport
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    
+    // Select the text
+    textArea.focus();
+    textArea.select();
+    
+    // Copy the text
+    let successful = false;
+    try {
+      successful = document.execCommand('copy');
+    } catch (err) {
+      console.error('Unable to copy text', err);
+    }
+    
+    // Remove the temporary textarea
+    document.body.removeChild(textArea);
+    
+    // return successful;
+    toast.success("Contact Address copied to clipboard", {
+        autoClose: 1000,
+        position: toast.POSITION.TOP_CENTER,
+        theme: toast.THEME.COLORED
+    });
+    copy_text = 'copied';
+    copied = true
+  }    
+
+  // Fallback method for older browsers
+}
+</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
